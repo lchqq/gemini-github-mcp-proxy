@@ -1,0 +1,72 @@
+{
+  "name": "gemini-github-mcp-proxy",
+  "version": "1.1.4",
+  "description": "Deploy a Cloudflare Worker that connects Gemini Web and Gemini App to GitHub Remote MCP.",
+  "type": "module",
+  "license": "MIT",
+  "author": "hrygo",
+  "homepage": "https://github.com/hrygo/gemini-github-mcp-proxy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrygo/gemini-github-mcp-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hrygo/gemini-github-mcp-proxy/issues"
+  },
+  "keywords": [
+    "gemini",
+    "github",
+    "mcp",
+    "cloudflare-workers",
+    "oauth",
+    "connector"
+  ],
+  "bin": {
+    "gemini-github-mcp": "./scripts/cli.mjs",
+    "gemini-github-mcp-proxy": "./scripts/cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "assets/",
+    "src/",
+    "scripts/cli.mjs",
+    "scripts/lib.mjs",
+    "scripts/setup.mjs",
+    "scripts/verify.mjs",
+    ".gitignore",
+    "README.md",
+    "README.en.md",
+    "SECURITY.md",
+    "TROUBLESHOOTING.md",
+    "RELEASING.md",
+    "LICENSE",
+    "tsconfig.json",
+    "wrangler.jsonc"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "verify": "node scripts/verify.mjs",
+    "check": "npm test && npm run typecheck && node --check scripts/cli.mjs && node --check scripts/setup.mjs && node --check scripts/verify.mjs && node --check scripts/pack.mjs",
+    "pack:release": "node scripts/pack.mjs",
+    "pack:share": "npm run pack:release",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "wrangler": "4.166.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261121.1",
+    "typescript": "7.0.2",
+    "vitest": "5.1.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261119.1": true,
+    "fsevents@2.3.3": true
+  }
+}

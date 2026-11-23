@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="340" viewBox="0 0 1440 340" role="img" aria-labelledby="title desc">
+  <title id="title">Gemini GitHub development workflow</title>
+  <desc id="desc">Gemini reads and plans, creates a branch and edits files, commits and opens a draft pull request, hands verification to CI and code agents, then completes review and merge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.6" stop-color="#0b1729"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#7dd3fc"/>
+    </marker>
+    <style>
+      .bg { fill: url(#bg); }
+      .eyebrow { fill: #7dd3fc; font: 700 13px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 2.4px; }
+      .title { fill: #f8fafc; font: 700 28px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .box { fill: #111c2f; stroke: #334155; stroke-width: 1.4; filter: url(#shadow); }
+      .step { fill: #67e8f9; font: 700 12px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 1.6px; }
+      .box-title { fill: #f8fafc; font: 700 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .box-copy { fill: #a8b5c7; font: 400 13px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .arrow { fill: none; stroke: #7dd3fc; stroke-width: 2.2; marker-end: url(#arrow); }
+      .footer { fill: #94a3b8; font: 500 14px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="340" rx="24"/>
+  <text class="eyebrow" x="52" y="48">GITHUB AS THE SHARED SOURCE OF TRUTH</text>
+  <text class="title" x="52" y="84">From Gemini intent to a verified pull request</text>
+
+  <rect class="box" x="40" y="120" width="220" height="136" rx="16"/>
+  <text class="step" x="64" y="151">01 · DISCOVER</text>
+  <text class="box-title" x="64" y="182">读取与规划</text>
+  <text class="box-copy" x="64" y="207">repo · Issues · commits</text>
+  <text class="box-copy" x="64" y="228">plan before write</text>
+
+  <rect class="box" x="300" y="120" width="220" height="136" rx="16"/>
+  <text class="step" x="324" y="151">02 · BUILD</text>
+  <text class="box-title" x="324" y="182">分支与修改</text>
+  <text class="box-copy" x="324" y="207">branch · edit files</text>
+  <text class="box-copy" x="324" y="228">scoped changes</text>
+
+  <rect class="box" x="560" y="120" width="220" height="136" rx="16"/>
+  <text class="step" x="584" y="151">03 · PUBLISH</text>
+  <text class="box-title" x="584" y="182">Commit 与 Draft PR</text>
+  <text class="box-copy" x="584" y="207">commit · PR · review</text>
+  <text class="box-copy" x="584" y="228">context stays on GitHub</text>
+
+  <rect class="box" x="820" y="120" width="240" height="136" rx="16"/>
+  <text class="step" x="844" y="151">04 · VERIFY</text>
+  <text class="box-title" x="844" y="182">CI 与 Code Agent</text>
+  <text class="box-copy" x="844" y="207">Actions · Codex · tests</text>
+  <text class="box-copy" x="844" y="228">fix from the same branch</text>
+
+  <rect class="box" x="1120" y="120" width="280" height="136" rx="16"/>
+  <text class="step" x="1144" y="151">05 · COMPLETE</text>
+  <text class="box-title" x="1144" y="182">Review 与合并</text>
+  <text class="box-copy" x="1144" y="207">human approval · audit trail</text>
+  <text class="box-copy" x="1144" y="228">merge when ready</text>
+
+  <path class="arrow" d="M260 188 H298"/>
+  <path class="arrow" d="M520 188 H558"/>
+  <path class="arrow" d="M780 188 H818"/>
+  <path class="arrow" d="M1060 188 H1118"/>
+
+  <circle cx="52" cy="302" r="5" fill="#34d399"/>
+  <text class="footer" x="68" y="307">Gemini App handles GitHub operations · CI and code agents carry full verification</text>
+</svg>
